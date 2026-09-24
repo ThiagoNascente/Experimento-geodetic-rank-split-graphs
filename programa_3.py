@@ -5,12 +5,6 @@ from libs import *
 def space():
     print('\n==============================\n')
 
-# G = gerar_split(
-#     tamanho_clique=5,
-#     tamanho_independente=4,
-#     probabilidade=0.5,
-#     #seed=10
-# )
 
 G = gerar_split_especifico_2()
 
