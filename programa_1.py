@@ -1,18 +1,14 @@
 from libs import *
 
-# rk(GGc) = max{h(GGc), maior clique}
-
 def space():
     print('\n==============================\n')
 
-# G = gerar_split(
-#     tamanho_clique=5,
-#     tamanho_independente=4,
-#     probabilidade=0.5,
-#     #seed=10
-# )
-
-G = gerar_split_especifico()
+G = gerar_split(
+    tamanho_clique=7,
+    tamanho_independente=4,
+    probabilidade=0.5,
+    #seed=10
+)
 
 GGc = prisma_complementar(G)
 
@@ -31,7 +27,7 @@ space()
 print('Arestas do GGc')
 print(GGc.edges())
 
-S = ['C2','C3','C4','I0', 'I1', 'I2', 'I3']
+S = ['C0','C1','C2','C3','C4', 'C5', 'C6']
 
 space()
 

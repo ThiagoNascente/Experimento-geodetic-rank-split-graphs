@@ -38,3 +38,8 @@ Instale as libs, estando dentro da venv
 pip install -r requirements.txt
 ```
 
+
+# Deduções
+
+Aparentemente o número de envoltória do exemplo do programa_3.py é 3 
+

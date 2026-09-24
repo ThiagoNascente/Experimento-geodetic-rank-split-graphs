@@ -52,8 +52,8 @@ def gerar_split_especifico():
     return G
 
 def gerar_split_especifico_2():
-    tamanho_clique = 5
-    tamanho_independente = 4
+    tamanho_clique = 7
+    tamanho_independente = 5
     G = nx.Graph()
 
     clique = [f"C{i}" for i in range(tamanho_clique)]
@@ -72,8 +72,8 @@ def gerar_split_especifico_2():
         for v in independente:
             G.add_edge(u, v)
 
-    G.add_nodes_from(["I4"], tipo="independente")
-    G.add_edge("I4", "C3")
-    G.add_edge("I4", "C4")
+    G.add_nodes_from(["I5"], tipo="independente")
+    G.add_edge("I5", "C5")
+    G.add_edge("I5", "C6")
 
     return G
