@@ -1,3 +1,7 @@
+# Ainda para realizar
+
+Terminar programa_6, ainda precisa da hipótese para conjunto de envoltória mínimo, aparentemente é |V(G)|...
+
 # MAC e Linux
 
 Gere um ambiente virtual python
