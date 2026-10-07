@@ -1,11 +1,19 @@
 from libs import *
 
-# rk(GGc) = max{h(GGc), maior clique}
+"""
+======================================== COMENTÁRIOS ========================================
+
+Relembrando que a regra se mantem mesmo quando temos excessos de vértices da clique consumidos
+quando G²[I] é conexo.
+
+=============================================================================================
+"""
 
 def space():
     print('\n==============================\n')
 
-G = gerar_split_especifico_2()
+
+G = gerar_split_especifico_6()
 
 GGc = prisma_complementar(G)
 
@@ -24,7 +32,7 @@ space()
 print('Arestas do GGc')
 print(GGc.edges())
 
-S = ['I4', 'I0']
+S = ['I5','C3', 'C4', 'C5', 'C6', 'I0', 'I1', 'I2', 'I3', 'I4', 'C1c', 'C0c']
 
 space()
 

@@ -1,12 +1,19 @@
 from libs import *
 
-# rk(GGc) = max{h(GGc), maior clique}
+"""
+======================================== COMENTÁRIOS ========================================
+
+Aqui tentaremos testar a configuração ótima para o menor conjunto de envoltória em um grafo split
+onde G²[I] é conexo.
+
+=============================================================================================
+"""
 
 def space():
     print('\n==============================\n')
 
 
-G = gerar_split_especifico_4()
+G = gerar_split_especifico_3()
 
 GGc = prisma_complementar(G)
 
@@ -25,7 +32,7 @@ space()
 print('Arestas do GGc')
 print(GGc.edges())
 
-S = ['I5','C3', 'C4', 'C5', 'C6', 'I0', 'I1', 'I2', 'I3', 'I4']
+S = ['C2','C3', 'C4', 'C5', 'C6', 'I0', 'I1', 'I2', 'I3', 'I4', 'C0c', 'C1c']
 
 space()
 

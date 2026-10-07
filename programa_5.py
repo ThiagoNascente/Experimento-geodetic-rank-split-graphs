@@ -1,6 +1,13 @@
 from libs import *
 
-# rk(GGc) = max{h(GGc), maior clique}
+"""
+======================================== COMENTÁRIOS ========================================
+
+Aqui testamos a nossa hipótese para quando o grafo split tem uma configuração onde o rank deste
+é justamente o número de vértices, onde fazemos uma seleção ótima.
+
+=============================================================================================
+"""
 
 def space():
     print('\n==============================\n')

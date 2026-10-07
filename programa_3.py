@@ -1,6 +1,14 @@
 from libs import *
 
-# rk(GGc) = max{h(GGc), maior clique}
+"""
+======================================== COMENTÁRIOS ========================================
+
+Aqui testamos uma hipótese trivial para conjunto de envoltória, sendo uma seleção ruim de
+vértices para quando escolhemos algum conjunto convexamente independente. No entanto, isso
+acontece para quando o grafo tem múltiplas componentes quando G²[I] é desconexo.
+
+=============================================================================================
+"""
 
 def space():
     print('\n==============================\n')
@@ -24,8 +32,6 @@ space()
 
 print('Arestas do GGc')
 print(GGc.edges())
-
-#S = ['C2','C3','C4','I0', 'I1', 'I2', 'I3']
 
 S = ['C2','C3' ,'C4' ,'I5', 'I0']
 

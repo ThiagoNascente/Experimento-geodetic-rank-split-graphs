@@ -1,12 +1,21 @@
 from libs import *
 
-# rk(GGc) = max{h(GGc), maior clique}
+"""
+======================================== COMENTÁRIOS ========================================
+
+Aqui testamos para G²[I] desconexos, onde a condição de que somente um elemento correspondente
+da clique que podemos selecionar para entrar em S, uma vez que se tivessem mais, quebrariam pois
+configuram casos ruins observados em Gc. Interessante que sempre que desejamos fugir de uma
+seleção em G, precisamos observar se ela não acontece no fecho em Gc. Isso dificulta...
+
+=============================================================================================
+"""
 
 def space():
     print('\n==============================\n')
 
 
-G = gerar_split_especifico_6()
+G = gerar_split_especifico_5()
 
 GGc = prisma_complementar(G)
 
@@ -25,7 +34,7 @@ space()
 print('Arestas do GGc')
 print(GGc.edges())
 
-S = ['I5','C3', 'C4', 'C5', 'C6', 'I0', 'I1', 'I2', 'I3', 'I4', 'C1c', 'C0c', 'C2c']
+S = ['C3', 'C4', 'C5', 'C6', 'I0', 'I1', 'I2', 'I3', 'I4', 'I5', 'C1c']
 
 space()
 

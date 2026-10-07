@@ -1,6 +1,15 @@
 from libs import *
 
-# rk(GGc) = max{h(GGc), maior clique}
+"""
+======================================== COMENTÁRIOS ========================================
+
+Aqui testamos a segunda hipótese, a de que selecionamos o rank de Gi e um vértice que chamo de
+ponte, um dos representantes que possui adjacência com todos do conjunto independente selecionado
+para o maior conjunto convexamente independente do split Gi. Lembrando que somos obrigados a
+observar somente o split com cada componente conexa de G²[I].
+
+=============================================================================================
+"""
 
 def space():
     print('\n==============================\n')

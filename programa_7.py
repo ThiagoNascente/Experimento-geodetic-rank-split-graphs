@@ -1,12 +1,20 @@
 from libs import *
 
-# rk(GGc) = max{h(GGc), maior clique}
+"""
+======================================== COMENTÁRIOS ========================================
+
+Aqui observamos que o nosso maior conjunto convexamente independente obrigatóriamente somente
+tem vértices de correspondentes da clique para Gc quando esses vértices em G tem vizinhança
+total com os vértices selecionados de I. Ainda estamos vendo exemplos de G²[I] conexos...
+
+=============================================================================================
+"""
 
 def space():
     print('\n==============================\n')
 
 
-G = gerar_split_especifico_5()
+G = gerar_split_especifico_4()
 
 GGc = prisma_complementar(G)
 
@@ -25,7 +33,7 @@ space()
 print('Arestas do GGc')
 print(GGc.edges())
 
-S = ['C3', 'C4', 'C5', 'C6', 'I0', 'I1', 'I2', 'I3', 'I4', 'I5']
+S = ['I5','C3', 'C4', 'C5', 'C6', 'I0', 'I1', 'I2', 'I3', 'I4', 'C1c']
 
 space()
 

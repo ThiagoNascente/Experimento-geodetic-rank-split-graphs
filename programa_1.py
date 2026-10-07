@@ -1,5 +1,13 @@
 from libs import *
 
+"""
+======================================== COMENTÁRIOS ========================================
+
+Aqui testamos a primeira hipótese, a de que selecionar a clique é válido. Esse caso é trivial
+
+=============================================================================================
+"""
+
 def space():
     print('\n==============================\n')
 
