@@ -25,7 +25,7 @@ space()
 print('Arestas do GGc')
 print(GGc.edges())
 
-S = ['I5','C3', 'C4', 'C5', 'C6', 'I0', 'I1', 'I2', 'I3', 'I4', 'C1c', 'C0c']
+S = ['I5','C3', 'C4', 'C5', 'C6', 'I0', 'I1', 'I2', 'I3', 'I4', 'C1c', 'C0c', 'C2c']
 
 space()
 
