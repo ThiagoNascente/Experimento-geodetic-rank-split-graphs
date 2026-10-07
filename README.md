@@ -18,6 +18,13 @@ Instale as libs, estando dentro da venv
 pip install -r requirements.txt
 ```
 
+*OBS.:* Talvez precise usar o seguinte para plotar os grafos 
+
+```bash
+sudo apt update
+sudo apt install python3-tk
+```
+
 # Windows
 
 Gere um ambiente virtual python
