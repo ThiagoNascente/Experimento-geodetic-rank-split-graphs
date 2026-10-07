@@ -6,7 +6,7 @@ def space():
     print('\n==============================\n')
 
 
-G = gerar_split_especifico_2()
+G = gerar_split_especifico_3()
 
 GGc = prisma_complementar(G)
 
