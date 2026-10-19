@@ -3,10 +3,8 @@ from libs import *
 """
 ======================================== COMENTÁRIOS ========================================
 
-Aqui testamos a segunda hipótese, a de que selecionamos o rank de Gi e um vértice que chamo de
-ponte, um dos representantes que possui adjacência com todos do conjunto independente selecionado
-para o maior conjunto convexamente independente do split Gi. Lembrando que somos obrigados a
-observar somente o split com cada componente conexa de G²[I].
+Aqui testamos a nossa hipótese para quando o grafo split tem uma configuração onde o rank deste
+é justamente o número de vértices, onde fazemos uma seleção ótima.
 
 =============================================================================================
 """
@@ -15,7 +13,7 @@ def space():
     print('\n==============================\n')
 
 
-G = gerar_split_especifico_2()
+G = gerar_split_2()
 
 GGc = prisma_complementar(G)
 
@@ -34,7 +32,7 @@ space()
 print('Arestas do GGc')
 print(GGc.edges())
 
-S = ['C2','C3', 'C4', 'C5', 'C6', 'I0', 'I1', 'I2', 'I3', 'I4', 'C0c']
+S = ['C2','C3', 'C4', 'C5', 'C6', 'I0', 'I1', 'I2', 'I3', 'I4', 'C0c', 'C1c']
 
 space()
 

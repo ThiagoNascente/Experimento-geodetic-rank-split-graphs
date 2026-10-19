@@ -3,8 +3,9 @@ from libs import *
 """
 ======================================== COMENTÁRIOS ========================================
 
-Aqui tentaremos testar a configuração ótima para o menor conjunto de envoltória em um grafo split
-onde G²[I] é conexo.
+Aqui testamos um caso onde o prisma complementar GGc do grafo split G tem rank no máximo 
+possível, ou seja, o número 8. Observamos sempre o grafo complemento, pois o grafo induzido
+Gc²[Cc] é um grafo conexo
 
 =============================================================================================
 """
@@ -13,7 +14,7 @@ def space():
     print('\n==============================\n')
 
 
-G = gerar_split_especifico_3()
+G = gerar_split_experimento_3() # GERANDO O GRAFO ESPECIFICO PARA ESSE EXPERIMENTO
 
 GGc = prisma_complementar(G)
 
@@ -32,7 +33,8 @@ space()
 print('Arestas do GGc')
 print(GGc.edges())
 
-S = ['C2','C3', 'C4', 'C5', 'C6', 'I0', 'I1', 'I2', 'I3', 'I4', 'C0c', 'C1c']
+S = ['C4c','C3c','C2c','I0c', 'I1c', 'I2c', 'I3c','I4'] # 8
+
 
 space()
 

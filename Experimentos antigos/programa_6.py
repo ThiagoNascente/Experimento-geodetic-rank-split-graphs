@@ -3,9 +3,8 @@ from libs import *
 """
 ======================================== COMENTÁRIOS ========================================
 
-Aqui observamos que o nosso maior conjunto convexamente independente obrigatóriamente somente
-tem vértices de correspondentes da clique para Gc quando esses vértices em G tem vizinhança
-total com os vértices selecionados de I. Ainda estamos vendo exemplos de G²[I] conexos...
+Aqui tentaremos testar a configuração ótima para o menor conjunto de envoltória em um grafo split
+onde G²[I] é conexo.
 
 =============================================================================================
 """
@@ -14,7 +13,7 @@ def space():
     print('\n==============================\n')
 
 
-G = gerar_split_especifico_4()
+G = gerar_split_2()
 
 GGc = prisma_complementar(G)
 
@@ -33,7 +32,7 @@ space()
 print('Arestas do GGc')
 print(GGc.edges())
 
-S = ['I5','C3', 'C4', 'C5', 'C6', 'I0', 'I1', 'I2', 'I3', 'I4', 'C1c']
+S = ['C2','C3', 'C4', 'C5', 'C6', 'I0', 'I1', 'I2', 'I3', 'I4', 'C0c', 'C1c']
 
 space()
 

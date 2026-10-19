@@ -3,8 +3,8 @@ from libs import *
 """
 ======================================== COMENTÁRIOS ========================================
 
-Aqui testamos a nossa hipótese para quando o grafo split tem uma configuração onde o rank deste
-é justamente o número de vértices, onde fazemos uma seleção ótima.
+Aqui testamos um caso onde o prisma complementar GGc do grafo split G tem rank no máximo 
+possível, ou seja, o número 9.
 
 =============================================================================================
 """
@@ -13,7 +13,7 @@ def space():
     print('\n==============================\n')
 
 
-G = gerar_split_especifico_3()
+G = gerar_split_experimento_2() # GERANDO O GRAFO ESPECIFICO PARA ESSE EXPERIMENTO
 
 GGc = prisma_complementar(G)
 
@@ -32,7 +32,8 @@ space()
 print('Arestas do GGc')
 print(GGc.edges())
 
-S = ['C2','C3', 'C4', 'C5', 'C6', 'I0', 'I1', 'I2', 'I3', 'I4', 'C0c', 'C1c']
+S = ['I0', 'I1', 'I2', 'I3', 'I4', 'C0', 'C4', 'C1c', 'C2c']
+
 
 space()
 

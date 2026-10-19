@@ -3,9 +3,10 @@ from libs import *
 """
 ======================================== COMENTÁRIOS ========================================
 
-Aqui testamos uma hipótese trivial para conjunto de envoltória, sendo uma seleção ruim de
-vértices para quando escolhemos algum conjunto convexamente independente. No entanto, isso
-acontece para quando o grafo tem múltiplas componentes quando G²[I] é desconexo.
+Aqui testamos para G²[I] desconexos, onde a condição de que somente um elemento correspondente
+da clique que podemos selecionar para entrar em S, uma vez que se tivessem mais, quebrariam pois
+configuram casos ruins observados em Gc. Interessante que sempre que desejamos fugir de uma
+seleção em G, precisamos observar se ela não acontece no fecho em Gc. Isso dificulta...
 
 =============================================================================================
 """
@@ -14,7 +15,7 @@ def space():
     print('\n==============================\n')
 
 
-G = gerar_split_especifico_2()
+G = gerar_split_4()
 
 GGc = prisma_complementar(G)
 
@@ -33,7 +34,7 @@ space()
 print('Arestas do GGc')
 print(GGc.edges())
 
-S = ['C2','C3' ,'C4' ,'I5', 'I0']
+S = ['C3', 'C4', 'C5', 'C6', 'I0', 'I1', 'I2', 'I3', 'I4', 'I5', 'C1c']
 
 space()
 

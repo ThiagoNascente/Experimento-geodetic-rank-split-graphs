@@ -28,30 +28,7 @@ def gerar_split(tamanho_clique, tamanho_independente, probabilidade=0.5, seed=No
 
     return G
 
-def gerar_split_especifico():
-    tamanho_clique = 5
-    tamanho_independente = 4
-    G = nx.Graph()
-
-    clique = [f"C{i}" for i in range(tamanho_clique)]
-    independente = [f"I{i}" for i in range(tamanho_independente)]
-
-    G.add_nodes_from(clique, tipo="clique")
-    G.add_nodes_from(independente, tipo="independente")
-
-    for i in range(tamanho_clique):
-        for j in range(i + 1, tamanho_clique):
-            G.add_edge(clique[i], clique[j])
-
-    vertices = ["C0","C1"]
-
-    for u in vertices:
-        for v in independente:
-            G.add_edge(u, v)
-
-    return G
-
-def gerar_split_especifico_2():
+def gerar_split_1():
     tamanho_clique = 7
     tamanho_independente = 5
     G = nx.Graph()
@@ -78,7 +55,7 @@ def gerar_split_especifico_2():
 
     return G
 
-def gerar_split_especifico_3():
+def gerar_split_2():
     tamanho_clique = 7
     tamanho_independente = 5
     G = nx.Graph()
@@ -102,7 +79,7 @@ def gerar_split_especifico_3():
     return G
 
 
-def gerar_split_especifico_4():
+def gerar_split_3():
     tamanho_clique = 7
     tamanho_independente = 5
     G = nx.Graph()
@@ -129,7 +106,7 @@ def gerar_split_especifico_4():
 
     return G
 
-def gerar_split_especifico_5():
+def gerar_split_4():
     tamanho_clique = 7
     tamanho_independente = 5
     G = nx.Graph()
@@ -158,7 +135,7 @@ def gerar_split_especifico_5():
     return G
 
 
-def gerar_split_especifico_6():
+def gerar_split_5():
     tamanho_clique = 7
     tamanho_independente = 5
     G = nx.Graph()
@@ -183,5 +160,83 @@ def gerar_split_especifico_6():
     G.add_edge("I5", "C1")
     G.add_edge("I5", "C0")
     G.add_edge("I5", "C2")
+
+    return G
+
+def gerar_split_experimento_1():
+    tamanho_clique = 5
+    tamanho_independente = 5
+    G = nx.Graph()
+
+    clique = [f"C{i}" for i in range(tamanho_clique)]
+    independente = [f"I{i}" for i in range(tamanho_independente)]
+
+    G.add_nodes_from(clique, tipo="clique")
+    G.add_nodes_from(independente, tipo="independente")
+
+    for i in range(tamanho_clique):
+        for j in range(i + 1, tamanho_clique):
+            G.add_edge(clique[i], clique[j])
+
+    vertices = ["C1","C2","C3"]
+
+    for u in vertices:
+        for v in independente:
+            G.add_edge(u, v)
+
+    return G
+
+def gerar_split_experimento_2():
+    tamanho_clique = 5
+    tamanho_independente = 4
+    G = nx.Graph()
+
+    clique = [f"C{i}" for i in range(tamanho_clique)]
+    independente = [f"I{i}" for i in range(tamanho_independente)]
+
+    G.add_nodes_from(clique, tipo="clique")
+    G.add_nodes_from(independente, tipo="independente")
+
+    for i in range(tamanho_clique):
+        for j in range(i + 1, tamanho_clique):
+            G.add_edge(clique[i], clique[j])
+
+    vertices = ["C1","C2"]
+
+    for u in vertices:
+        for v in independente:
+            G.add_edge(u, v)
+
+    G.add_nodes_from(["I4"], tipo="independente")
+    G.add_edge("I4", "C1")
+    G.add_edge("I4", "C2")
+    G.add_edge("I4", "C3")
+
+    return G
+
+
+def gerar_split_experimento_3():
+    tamanho_clique = 5
+    tamanho_independente = 4
+    G = nx.Graph()
+
+    clique = [f"C{i}" for i in range(tamanho_clique)]
+    independente = [f"I{i}" for i in range(tamanho_independente)]
+
+    G.add_nodes_from(clique, tipo="clique")
+    G.add_nodes_from(independente, tipo="independente")
+
+    for i in range(tamanho_clique):
+        for j in range(i + 1, tamanho_clique):
+            G.add_edge(clique[i], clique[j])
+
+    vertices = ["C2","C3","C4"]
+
+    for u in vertices:
+        for v in independente:
+            G.add_edge(u, v)
+
+    G.add_nodes_from(["I4"], tipo="independente")
+    G.add_edge("I4", "C1")
 
     return G

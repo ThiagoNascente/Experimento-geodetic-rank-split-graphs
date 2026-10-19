@@ -52,5 +52,15 @@ pip install -r requirements.txt
 
 # Deduções
 
-Aparentemente o número de envoltória do exemplo do programa_3.py é 3 
+Para executar os experimentos anteriores rode:
+
+```bash
+python -m 'Experimentos antigos.programa_1.py'
+```
+
+Para os novos experimentos, execute:
+
+```bash
+python -m experimentos_novos.exp_1.py
+```
 
