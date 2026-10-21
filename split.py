@@ -240,3 +240,36 @@ def gerar_split_experimento_3():
     G.add_edge("I4", "C1")
 
     return G
+
+def gerar_split_experimento_4():
+    tamanho_clique = 6
+    tamanho_independente = 5
+    G = nx.Graph()
+
+    clique = [f"C{i}" for i in range(tamanho_clique)]
+    independente = [f"I{i}" for i in range(tamanho_independente)]
+
+    G.add_nodes_from(clique, tipo="clique")
+    G.add_nodes_from(independente, tipo="independente")
+
+    for i in range(tamanho_clique):
+        for j in range(i + 1, tamanho_clique):
+            G.add_edge(clique[i], clique[j])
+
+    vertices = ["C0","C1","C2"]
+
+    parte_independente = ["I0", "I1", "I2"]
+
+    for u in vertices:
+        for v in parte_independente:
+            G.add_edge(u, v)
+
+    G.add_edge("I3", "C1")
+    G.add_edge("I3", "C2")
+    G.add_edge("I3", "C3")
+
+    G.add_edge("I4", "C1")
+    G.add_edge("I4", "C2")
+    G.add_edge("I4", "C3")
+
+    return G
