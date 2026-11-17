@@ -1,4 +1,4 @@
-from libs import *
+import networkx as nx
 
 def gerar_complemento(G):
     """

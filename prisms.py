@@ -1,4 +1,6 @@
-from libs import *
+import networkx as nx
+
+from grafo_complemento import gerar_complemento
 
 
 def prisma_complementar(G):

@@ -1,4 +1,4 @@
-from libs import *
+import networkx as nx
 
 def construir_grafo(G):
     H = G.copy()
