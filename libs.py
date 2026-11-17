@@ -8,3 +8,5 @@ from grafo_complemento import *
 from plotando_grafos import *
 from prisms import *
 from split import *
+from grafo_diam_2 import *
+from math import comb

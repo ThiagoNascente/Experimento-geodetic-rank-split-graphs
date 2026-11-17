@@ -27,7 +27,7 @@ def geodetic_hull(G, S):
     return R
 
 
-def geodetic_rank(G,S):
+def geodetic_rank_antiga(G,S):
     S_set = set(S)
     fecho_base = geodetic_hull(G, S)
     for i in S:
@@ -37,6 +37,19 @@ def geodetic_rank(G,S):
         fecho = geodetic_hull(G, copia)
         if fecho == fecho_base:
             print(i)
+            return False
+
+    return True
+
+def geodetic_rank(G, S):
+    S_set = set(S)
+
+    for i in S_set:
+        copia = S_set - {i}
+
+        fecho = geodetic_hull(G, copia)
+
+        if i in fecho:
             return False
 
     return True
